@@ -42,10 +42,10 @@ class MainCoordinator: Coordinator {
     func viewControllerDemoScreen4() {
         let vc = ViewControllerDemoScreen4.instantiate()
         // Before we open Demoscreen4 we set the productAction telling it what to do when it receives data.
-        vc.productAction = { products in
+        vc.productAction = { [weak self] products in
     
             products.forEach{ print($0.subtitle)}
-            self.viewControllerDemoScreen5()
+            self?.viewControllerDemoScreen5()
         }
         
         navigationController.pushViewController(vc, animated: true)
@@ -60,14 +60,16 @@ class MainCoordinator: Coordinator {
     func viewControllerDemoScreen6() {
         let vc = ViewControllerDemoScreen6.instantiate()
         
-        vc.buttonTappedClosure1 = {
+        // unowned self will make sure there is no strong reference to the vc
+        vc.buttonTappedClosure1 = { [unowned self] in
             print("Goto screen 5 with a closure")
             self.viewControllerDemoScreen5()
         }
         
-        vc.buttonTappedClosure2 =  {
+        // [weak self] will handle self as optional and has no strong reference to vc
+        vc.buttonTappedClosure2 =  { [weak self] in
             print("Goto screen 3 with a closure")
-             self.viewControllerDemoScreen3()
+            self?.viewControllerDemoScreen3()
         }
         
         navigationController.pushViewController(vc, animated: true)
