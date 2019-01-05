@@ -56,4 +56,20 @@ class MainCoordinator: Coordinator {
         
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func viewControllerDemoScreen6() {
+        let vc = ViewControllerDemoScreen6.instantiate()
+        
+        vc.buttonTappedClosure1 = {
+            print("Goto screen 5 with a closure")
+            self.viewControllerDemoScreen5()
+        }
+        
+        vc.buttonTappedClosure2 =  {
+            print("Goto screen 3 with a closure")
+             self.viewControllerDemoScreen3()
+        }
+        
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

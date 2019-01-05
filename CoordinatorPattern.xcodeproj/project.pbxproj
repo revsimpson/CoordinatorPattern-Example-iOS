@@ -20,6 +20,7 @@
 		174A7A2221E00EED00263D1C /* ViewControllerDemoScreen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A7A1421E00EEC00263D1C /* ViewControllerDemoScreen5.swift */; };
 		174A7A2321E00EED00263D1C /* ViewControllerDemoScreen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A7A1521E00EEC00263D1C /* ViewControllerDemoScreen3.swift */; };
 		174A7A2421E00EED00263D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A7A1621E00EEC00263D1C /* AppDelegate.swift */; };
+		AFADB52D21E0A0BA0090A401 /* ViewControllerDemoScreen6.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFADB52C21E0A0BA0090A401 /* ViewControllerDemoScreen6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		174A7A1521E00EEC00263D1C /* ViewControllerDemoScreen3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDemoScreen3.swift; sourceTree = "<group>"; };
 		174A7A1621E00EEC00263D1C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		174A7A1721E00EEC00263D1C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFADB52C21E0A0BA0090A401 /* ViewControllerDemoScreen6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDemoScreen6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				174A7A1321E00EEC00263D1C /* ViewControllerDemoScreen2.swift */,
 				174A7A1421E00EEC00263D1C /* ViewControllerDemoScreen5.swift */,
 				174A7A1521E00EEC00263D1C /* ViewControllerDemoScreen3.swift */,
+				AFADB52C21E0A0BA0090A401 /* ViewControllerDemoScreen6.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFADB52D21E0A0BA0090A401 /* ViewControllerDemoScreen6.swift in Sources */,
 				174A7A1F21E00EED00263D1C /* ViewController.swift in Sources */,
 				174A7A2021E00EED00263D1C /* ViewControllerDemoScreen4.swift in Sources */,
 				174A7A2321E00EED00263D1C /* ViewControllerDemoScreen3.swift in Sources */,

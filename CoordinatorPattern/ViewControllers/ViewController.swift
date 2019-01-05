@@ -14,7 +14,6 @@ class ViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func gotoDemoScreen2(_ sender: UIButton) {
@@ -27,6 +26,10 @@ class ViewController: UIViewController, Storyboarded {
     
     @IBAction func gotoDemoScreen4(_ sender: Any) {
         coordinator?.viewControllerDemoScreen4()
+    }
+    
+    @IBAction func gotoDemoScreen6(_ sender: Any) {
+        coordinator?.viewControllerDemoScreen6()
     }
 }
 

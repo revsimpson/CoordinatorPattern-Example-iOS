@@ -31,7 +31,6 @@ class ViewControllerDemoScreen4: UIViewController, Storyboarded {
     }
     
     @IBAction func sendSomeData(_ sender: Any) {
-        
         doSomethingWithData()
     }
     
