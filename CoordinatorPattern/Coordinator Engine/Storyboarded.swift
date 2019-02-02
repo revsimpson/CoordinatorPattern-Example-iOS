@@ -16,11 +16,13 @@ protocol Storyboarded {
 extension Storyboarded where Self: UIViewController {
     static func instantiate() -> Self {
         // this pulls out "MyApp.MyViewController"
-        let fullName = NSStringFromClass(self)
+//        let fullName = NSStringFromClass(self)
         
         // this splits by the dot and uses everything after, giving "MyViewController"
-        let className = fullName.components(separatedBy: ".")[1]
+//        let className = fullName.components(separatedBy: ".")[1]
         
+        // Shorter then the the example above!
+        let className = String(describing: self)
         // load our storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
