@@ -5,7 +5,8 @@
 //  Created by Richard EV Simpson on 04/01/2019.
 //  Copyright © 2019 REVS. All rights reserved.
 //
-
+// Check out https://www.youtube.com/watch?v=ueByb0MBMQ4 for more info regarding coordinators
+// Coordinators is thaks to Soroush Khanlou
 import Foundation
 import UIKit
 
