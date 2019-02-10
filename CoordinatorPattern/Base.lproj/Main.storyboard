@@ -58,11 +58,19 @@
                                     <action selector="gotoDemoScreen6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4GG-Zg-3i0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzh-rI-QXG">
+                                <rect key="frame" x="94.5" y="477" width="186" height="30"/>
+                                <state key="normal" title="Open with childcoordinator"/>
+                                <connections>
+                                    <action selector="gotoViewContollerWithChildCoordinator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDE-yC-W49"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hAi-5k-8dm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="11w-Dq-of7"/>
                             <constraint firstItem="Rec-GA-uWP" firstAttribute="top" secondItem="hAi-5k-8dm" secondAttribute="bottom" constant="50" id="4r7-1S-wJd"/>
+                            <constraint firstItem="Dzh-rI-QXG" firstAttribute="top" secondItem="GSq-wX-pML" secondAttribute="bottom" constant="18" id="N6q-o4-36C"/>
                             <constraint firstItem="uKr-7Q-LF5" firstAttribute="top" secondItem="ONO-Fc-olH" secondAttribute="bottom" constant="22" id="T58-h7-l5g"/>
                             <constraint firstItem="GSq-wX-pML" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V32-4f-QTr"/>
                             <constraint firstItem="Rec-GA-uWP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X6Z-Dp-15R"/>
@@ -72,6 +80,7 @@
                             <constraint firstItem="uKr-7Q-LF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j8P-du-udm"/>
                             <constraint firstItem="ONO-Fc-olH" firstAttribute="top" secondItem="Rec-GA-uWP" secondAttribute="bottom" constant="22" id="jhb-cj-rAt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hAi-5k-8dm" secondAttribute="bottom" constant="444" id="wKb-za-M64"/>
+                            <constraint firstItem="Dzh-rI-QXG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zCc-xM-5MU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -79,6 +88,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="32"/>
+        </scene>
+        <!--Some Functionality1 View Controller-->
+        <scene sceneID="guc-qw-O1Z">
+            <objects>
+                <viewController storyboardIdentifier="SomeFunctionality1ViewController" id="oZe-Mw-psB" customClass="SomeFunctionality1ViewController" customModule="CoordinatorPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rsf-Ha-tK0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opened with child coordinator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkA-9e-piF">
+                                <rect key="frame" x="72" y="323" width="231" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WyN-uO-xcb"/>
+                                    <constraint firstAttribute="width" constant="231" id="h0d-bg-ZMu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99814695119999997" green="0.78106433149999999" blue="0.13731276989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OkA-9e-piF" firstAttribute="centerY" secondItem="Rsf-Ha-tK0" secondAttribute="centerY" id="LA4-rL-G7u"/>
+                            <constraint firstItem="OkA-9e-piF" firstAttribute="centerX" secondItem="Rsf-Ha-tK0" secondAttribute="centerX" id="jAZ-vM-ODO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lm8-sn-HNf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDf-TS-PZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-612"/>
         </scene>
         <!--View Controller Demo Screen2-->
         <scene sceneID="JhV-Fq-UBX">

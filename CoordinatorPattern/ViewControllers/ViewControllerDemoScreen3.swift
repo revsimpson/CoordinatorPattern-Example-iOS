@@ -11,7 +11,7 @@ import UIKit
 
 class ViewControllerDemoScreen3: UIViewController, Storyboarded {
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: MainCoordinatorProtocol?
     
     
     override func viewDidLoad() {

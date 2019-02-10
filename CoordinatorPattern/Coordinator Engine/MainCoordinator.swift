@@ -9,7 +9,16 @@
 import Foundation
 import UIKit
 
-class MainCoordinator: Coordinator {
+protocol MainCoordinatorProtocol: AnyObject{
+    func viewControllerDemoScreen2(products:[DemoStruct]?)
+    func SomeFunctionality1ViewController()
+    func viewControllerDemoScreen4()
+    func viewControllerDemoScreen3()
+    func viewControllerDemoScreen5()
+    func viewControllerDemoScreen6()
+}
+
+class MainCoordinator: NSObject,Coordinator, UINavigationControllerDelegate,MainCoordinatorProtocol {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -19,9 +28,17 @@ class MainCoordinator: Coordinator {
     
     func start() {
         // The first screen to show in your app
+        navigationController.delegate = self
         let vc = ViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func SomeFunctionality1ViewController() {
+        let child = SomeFunctionality1Coordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
     
     func viewControllerDemoScreen2(products:[DemoStruct]?) {
@@ -38,12 +55,12 @@ class MainCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
-
+    
     func viewControllerDemoScreen4() {
         let vc = ViewControllerDemoScreen4.instantiate()
         // Before we open Demoscreen4 we set the productAction telling it what to do when it receives data.
         vc.productAction = { [weak self] products in
-    
+            
             products.forEach{ print($0.subtitle)}
             self?.viewControllerDemoScreen5()
         }
@@ -73,5 +90,24 @@ class MainCoordinator: Coordinator {
         }
         
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func childDidFinish(_ child:Coordinator?){
+        for (index, coordinator) in  childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
+        
+        if navigationController.viewControllers.contains(fromViewController) { return }
+        
+        if let someFunctionality1Viewcontroller = fromViewController as? SomeFunctionality1ViewController {
+            childDidFinish(someFunctionality1Viewcontroller.coordinator)
+        }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, Storyboarded {
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: MainCoordinatorProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,9 @@ class ViewController: UIViewController, Storyboarded {
     
     @IBAction func gotoDemoScreen6(_ sender: Any) {
         coordinator?.viewControllerDemoScreen6()
+    }
+    @IBAction func gotoViewContollerWithChildCoordinator(_ sender: Any) {
+        coordinator?.SomeFunctionality1ViewController()
     }
 }
 
